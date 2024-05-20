@@ -8,7 +8,7 @@ langchain=0.1.20
 google-cloud=0.34.0
 numpy==1.0.3
 opencv-python==3.4.1.14
-pillow=1.6
+pillow
 matplotlib==3.6.3
 tensorflow-gpu==2.6.0
 librosa=0.10.2
