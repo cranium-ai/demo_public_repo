@@ -47,5 +47,5 @@ def qa():
     response = generate_response(question)
     return jsonify({'response': response['result']})
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
