@@ -11,6 +11,7 @@
 - Image classification
 - Object detection
 - Speech recognition
+- Image to Text
 - Random models with no pipelines: 2 CNNs, 1 MLP
 
 ## Data Science
