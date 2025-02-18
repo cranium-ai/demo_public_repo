@@ -1,6 +1,7 @@
 import math
 import torch
 from torch.nn import Module as TorchModule
+import transformers
 
 
 class GlobalAveragePool_5(torch.nn.Module):
@@ -70,3 +71,9 @@ class Autoencoder_5(TorchModule):
         x = self.encoder(x)
         x = self.decoder(x)
         return x
+    
+HF_model_1 = transformers.AutoImageProcessor.from_pretrained("google/mobilenet_v2_1.0_224")
+
+HF_model_2 = transformers.AutoImageProcessor.from_pretrained("microsoft/resnet-18")
+
+HF_model_3 = transformers.AutoImageProcessor.from_pretrained("facebook/deit-base-distilled-patch16-224")

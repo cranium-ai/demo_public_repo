@@ -3,7 +3,7 @@ import torch
 from flask import Flask, request, jsonify
 
 # Load the model and tokenizer from Hugging Face
-model_name = "meta-llama/Meta-Llama-3-70B"  # Replace with the correct model name if different
+model_name = "mistralai/Mixtral-8x7B-v0.1"  # Replace with the correct model name if different
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
