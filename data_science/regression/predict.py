@@ -23,6 +23,7 @@ def train_model():
 
     # Create a Linear Regression model
     model = LinearRegression()
+    model2 = LinearRegressionRegressor()
 
     # Train the model on the training data
     model.fit(X_train, y_train)
