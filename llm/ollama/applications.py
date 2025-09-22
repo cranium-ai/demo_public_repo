@@ -20,3 +20,25 @@ response: ChatResponse = chat(
         },
     ],
 )
+
+# Testing, not valid ollama model format
+response: ChatResponse = chat(
+    model="gpt-oss-20b",
+    messages=[
+        {
+            "role": "user",
+            "content": "Why is the sky blue?",
+        },
+    ],
+)
+
+# Testing, not valid ollama model format
+response: ChatResponse = chat(
+    model="gpt-oss-120b",
+    messages=[
+        {
+            "role": "user",
+            "content": "Why is the sky blue?",
+        },
+    ],
+)
