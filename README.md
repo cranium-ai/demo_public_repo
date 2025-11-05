@@ -1,5 +1,8 @@
 # Example scenarios
 
+Ideal BOM Branch
+
+
 ## LLM
 - Chatbot using Azure OpenAI
 - Chatbot using AWS Bedrock
