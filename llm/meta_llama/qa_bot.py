@@ -3,9 +3,14 @@ import torch
 from flask import Flask, request, jsonify
 
 # Load the model and tokenizer from Hugging Face
-model_name = "meta-llama/Meta-Llama-3-70B"  # Replace with the correct model name if different
+model_name = (
+    "meta-llama/Meta-Llama-3-70B"  # Replace with the correct model name if different
+)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
+
+model2 = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.3-70B-Instruct")
+
 
 # Define the function to generate a response
 def generate_response(question, model, tokenizer):
@@ -14,15 +19,18 @@ def generate_response(question, model, tokenizer):
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return response
 
+
 # Create the Flask app
 app = Flask(__name__)
 
-@app.route('/qa', methods=['POST'])
+
+@app.route("/qa", methods=["POST"])
 def qa():
     data = request.json
-    question = data.get('question')
+    question = data.get("question")
     response = generate_response(question, model, tokenizer)
-    return jsonify({'response': response})
+    return jsonify({"response": response})
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)
