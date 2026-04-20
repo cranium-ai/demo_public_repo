@@ -110,6 +110,8 @@ seat_booking_agent = Agent[AirlineAgentContext](
     3. Use the update seat tool to update the seat on the flight.
     If the customer asks a question that is not related to the routine, transfer back to the triage agent. """,
     tools=[update_seat],
+    mcp_servers=["reservation_database"],
+    output_guardrails=["seat_validation"]
 )
 
 triage_agent = Agent[AirlineAgentContext](
