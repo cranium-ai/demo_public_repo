@@ -221,14 +221,14 @@ lightgbm_regressor.predict(_X_train[:1])
 # 3.  XGBOOST MODELS
 # =============================================================================
 
-import xgboost as xgb
+from xgboost import XGBClassifier, XGBRegressor
 
 # XGBoost Classifier
-xgboost_classifier = xgb.XGBClassifier(n_estimators=10, verbosity=0)
+xgboost_classifier = XGBClassifier(n_estimators=10, verbosity=0)
 xgboost_classifier.fit(_X_train, _y_cls)
 xgboost_classifier.predict(_X_train[:1])
 
 # XGBoost Regressor
-xgboost_regressor = xgb.XGBRegressor(n_estimators=10, verbosity=0)
+xgboost_regressor = XGBRegressor(n_estimators=10, verbosity=0)
 xgboost_regressor.fit(_X_train, _y_reg)
 xgboost_regressor.predict(_X_train[:1])

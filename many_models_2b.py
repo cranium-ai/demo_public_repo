@@ -25,11 +25,11 @@ vgg19_model(_dummy_tensor)
 
 # yolov10b  – ultralytics
 from ultralytics import YOLO
-yolov10b_model = YOLO("yolov10b.pt")
+yolov10b_model = YOLO("yolov10b")
 yolov10b_model.predict(DUMMY_IMAGE_PATH, verbose=False)
 
 # yolov3  – ultralytics
-yolov3_model = YOLO("yolov3.pt")
+yolov3_model = YOLO("yolov3")
 yolov3_model.predict(DUMMY_IMAGE_PATH, verbose=False)
 
 
@@ -95,9 +95,9 @@ ssd_inception_v2_tf = hub.load(
 )
 
 # vgg_16
-tf_vgg16 = tf.keras.applications.VGG16(weights=None)
+tf_vgg16 = tf.keras.applications.vgg16(weights=None)
 tf_vgg16.predict(tf.random.normal([1, 224, 224, 3]))
 
 # vgg_19
-tf_vgg19 = tf.keras.applications.VGG19(weights=None)
+tf_vgg19 = tf.keras.applications.vgg19(weights=None)
 tf_vgg19.predict(tf.random.normal([1, 224, 224, 3]))

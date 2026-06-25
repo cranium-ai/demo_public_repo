@@ -90,17 +90,17 @@ mobilenet_v2_model.eval()
 mobilenet_v2_model(_dummy_tensor)
 
 # resnet_v1_50  – use torchvision resnet50 (ResNet-v1 by default)
-resnet_v1_50_model = tv_models.resnet50(weights=None)
+resnet_v1_50_model = tv_models.resnet_v1_50(weights=None)
 resnet_v1_50_model.eval()
 resnet_v1_50_model(_dummy_tensor)
 
 # resnet_v1_101
-resnet_v1_101_model = tv_models.resnet101(weights=None)
+resnet_v1_101_model = tv_models.resnet_v1_101(weights=None)
 resnet_v1_101_model.eval()
 resnet_v1_101_model(_dummy_tensor)
 
 # resnet_v1_152
-resnet_v1_152_model = tv_models.resnet152(weights=None)
+resnet_v1_152_model = tv_models.resnet_v1_152(weights=None)
 resnet_v1_152_model.eval()
 resnet_v1_152_model(_dummy_tensor)
 
